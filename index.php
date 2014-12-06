@@ -14,11 +14,11 @@
 include('functions.php');
 include('config.php');
 
-$somestring = bin2hex(openssl_random_pseudo_bytes(16));
+//$somestring = bin2hex(openssl_random_pseudo_bytes(16));
 
-$salt = '$6$rounds=5000$'.$somestring;
-$password = crypt('password', $salt);
-echo $password;
+//$salt = '$6$rounds=5000$'.$somestring;
+//$password = crypt('password', $salt);
+//echo $password;
 //echo "<br />".crypt('password', $password);
 
 Comments('tu');
