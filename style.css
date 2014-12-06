@@ -1,0 +1,493 @@
+
+/********************************************************************
+ *
+ *  File's name: style.css
+ *  Script's author: Filip Markiewicz (www.filipmarkiewicz.pl)
+ *
+ *  Created: 10.11.2014r.
+ *  Last modificated: 27.11.2014r.
+ *
+ ********************************************************************/
+ 
+* {
+margin: 0;
+padding: 0;
+}
+html {
+background: url('img/bg.png') #2e2e2e repeat-x top;
+color: #ddd;
+font-size: 11px;
+font-family: Verdana, Arial, sans-serif;
+padding: 20px 0;
+}
+
+/*****************
+ *               *
+ *     DIVES     *
+ *               *
+ *****************/
+
+.rt_correct,
+.rt_error,
+.rt_warning {
+padding: 20px;
+background: #222;	
+border: 1px solid #999;
+width: 500px;
+margin: 20px auto;
+}
+.rt_correct {
+border-color: #090;
+}
+.rt_error {
+border-color: #a00;
+}
+.rt_container {
+background: #2a2a2a;
+border: 1px solid #111;
+width: 880px;
+margin: 20px auto;	
+padding: 20px;
+position: relative;
+}
+.rt_container > main {
+padding: 20px 30px 40px 30px;
+}
+
+/*******************
+ *                 *
+ *     HEADERS     *
+ *                 *
+ *******************/
+
+.rt_container > header {
+margin: 0 auto;
+border-bottom: 1px solid #c4c4c4;
+}
+.rt_container > main > .rt_return {
+position: absolute;
+left: 10px;
+bottom: 10px;
+font-size: 12px;
+margin: 0;
+padding: 0;
+font-family: 'Times New Roman', Georgia, serif;
+}
+.rt_container > header > .rt_last_visit {
+float: right;
+padding: 0;
+margin: -10px 0 0 0;
+color: #555;
+font-size: 10px;
+}
+.rt_container > header > h1 {
+padding: 0;
+margin: 0 0 0 30px;	
+font-size: 40px;
+font-family: Times New Roman;
+letter-spacing: 2px;
+color: #c4c4c4;
+font-weight: normal;
+clear: both;
+}
+.rt_container > header > h1 > a {
+padding: 0;
+margin: 0;
+color: #ddd;
+display: inline;	
+}
+.rt_container h2 {
+font: normal 20px Georgia, Serif;
+margin: 0;
+padding: 10px 0 0 0;	
+text-align: center;
+letter-spacing: 1px;
+clear: both;
+}
+.rt_container h2:first-letter {
+color: #db7f13;
+font-size: 22px;
+}
+.rt_form h2 {
+padding: 0 0 10px 0;	
+font-size: 24px;
+font-weight: normal;
+font-family: Georgia, serif;
+margin: 0 0 -5px 0;
+text-align: center;
+letter-spacing: 2px;
+clear: both;
+}
+.rt_form h2:first-letter {
+color: #db7f13;
+font-size: 28px;
+}
+
+/*****************
+ *               *
+ *     FORMS     *
+ *               *
+ *****************/
+ 
+.rt_form {
+display: block;
+margin: 20px auto;
+font-size: 12px;
+}
+.rt_form fieldset {
+width: 402px;
+padding: 10px 30px;
+border: 1px solid #000;
+background: #292929;
+overflow: hidden;
+margin: 0 auto;
+margin: 20px auto;
+}
+.rt_form legend {
+display: none;	
+}
+.rt_form label {
+display: block;
+margin: 15px auto;
+width: 300px;
+}
+.rt_form input,
+.rt_form textarea {
+display: block;
+margin: 5px 0 0 0;
+padding: 4px;
+background: #2e2e2e;
+border: 1px solid #050505;
+color: #eee;
+font-family: Verdana, Arial, sans-serif;
+font-size: 11px; 
+width: 294px;
+}
+.rt_form input:focus,
+.rt_form textarea:focus {
+background: #333;
+border-color: #000;	
+}
+.rt_form button,
+.rt_delete_form .rt_return,
+.rt_comments_table button {
+background: url('img/button_bg.png') repeat-x 0 -30px;
+border: 1px solid #050505;
+margin: 30px auto 0 auto;
+font-size: 15px;
+font-family: Times New Roman, Georgia, serif;
+color: #c4c4c4;
+width: 100px;
+display: block;
+letter-spacing: 1px; 
+padding: 0;
+height: 30px;
+line-height: 30px;
+text-align: center;
+clear: both;
+}
+.rt_form button:hover,
+.rt_form button:focus,
+.rt_delete_form .rt_return:hover,
+.rt_delete_form .rt_return:focus,
+.rt_comments_table button:hover,
+.rt_comments_table button:focus {
+background-position: 0 0;
+background-color: #222;
+cursor: pointer;
+}
+.rt_form .rt_captcha {
+overflow: hidden;	
+}
+.rt_form .rt_captcha div {
+float: left;	
+padding: 10px 10px 0 0;
+font-size: 11px;
+}
+.rt_form .rt_captcha input {
+float: left;
+text-align: center;
+width: 40px;	
+}
+.rt_form label > span {
+color: #900;	
+margin: 0 0 0 3px;	
+}
+
+.rt_comment_form {
+margin: 20px auto;
+}
+.rt_comment_form fieldset {
+width: 562px;
+}
+.rt_comment_form .rt_user_informations {
+float: left;
+width: 200px;	
+}
+.rt_comment_form .rt_user_informations p {
+font-size: 16px;
+padding: 15px 0;
+font-weight: bold;
+}
+.rt_comment_form fieldset label {
+width: 200px;	
+}
+.rt_comment_form fieldset input {
+width: 194px;
+}
+.rt_comment_form .rt_content {
+float: right;
+width: 330px;
+}
+.rt_comment_form textarea {
+width: 320px;
+height: 130px;	
+resize: vertical;
+}
+
+.rt_delete_form button {
+float: left;
+margin: 40px 0 20px 50px;
+clear: none;
+}
+.rt_delete_form .rt_return {
+float: right;
+margin: 40px 50px 20px 0;
+clear: none;
+}
+
+.rt_comment_group_form {
+background: #2c2c2c;
+border: 1px solid #111;
+padding: 20px 20px 10px 20px;
+width: 700px;	
+}
+
+/*****************
+ *               *
+ *     LINKS     *
+ *               *
+ *****************/
+ 
+a {
+color: #bbb;
+text-decoration: none;
+}
+a:hover,
+a:focus {
+color: #eee;
+}
+.rt_return {
+font-size: 11px;
+font-weight: normal;
+margin: 0 0 0 -10px;	
+}
+
+/**********************
+ *                    *
+ *     PARAGRAPHS     *
+ *                    *
+ **********************/
+ 
+.rt_login_info {
+color: #777;
+margin: 0 auto -18px auto;
+padding: 0;	
+font-size: 10px;
+text-align: right;
+width: 590px;
+}
+.rt_login_info a {
+color: #777;	
+}
+.rt_login_info a:hover {
+color: #eee;	
+}
+.rt_container p {
+text-align: justify;
+font-size: 11px;
+line-height: 20px;
+padding: 10px 0;	
+}
+.rt_container .rt_signature {
+text-align: right;
+font-style: italic;	
+}
+
+/*****************
+ *               *
+ *     LISTS     *
+ *               *
+ *****************/
+ 
+.rt_comments {
+list-style-type: none;
+padding: 20px 0;
+margin: 0 auto;	
+width: 800px;
+}
+.rt_comments > li {
+margin: 0;
+padding: 0;
+}
+.rt_comments > li > .rt_comment {
+background: #2a2a2a;
+border: 1px solid #1a1a1a;
+padding: 10px 30px 10px 20px;
+margin: 20px 0 20px auto;
+overflow: hidden;
+width: 660px;	
+}
+.rt_comments > li > .rt_admin_comment {
+margin: 20px 0;	
+background: #242424;
+border: 1px solid #000;
+}
+.rt_comments > li .rt_data {
+float: left;	
+width: 160px;
+padding: 10px 29px 10px 0;
+margin: 0;
+border-right: 1px solid #373737;
+}
+.rt_comments > li .rt_data > ul {
+width: 140px;
+padding: 10px 29px 10px 0;
+margin: 0;
+list-style-type: none;
+}
+.rt_comments > li .rt_data > ul > li {
+margin: 5px 0;
+padding: 0;	
+background: none;
+}
+.rt_comments > li .rt_content {
+float: right;
+width: 440px;
+padding: 15px 0 15px 30px;
+margin: 0 0 0 -1px;
+font-size: 11px;
+line-height: 20px;
+text-align: justify;
+border-left: 1px solid #373737;
+}
+.rt_comments .rt_admin_comment > .rt_user_data,
+.rt_comments .rt_admin_comment > .rt_content {
+border-color: #313131;
+}
+.rt_comments .rt_nick {
+font-size: 15px;
+font-weight: bold;
+padding: 0;
+margin: 0;
+text-indent: 0;
+}
+.rt_comments .rt_date {
+font-size: 10px;
+color: #555;	
+margin: 0;
+padding: 0;
+text-indent: 0;
+}
+.rt_admin_actions {
+list-style-type: none;
+padding: 0;
+margin: 0;
+text-align: right;
+font-size: 10px;
+}
+.rt_admin_actions li {
+display: inline;
+}
+
+.rt_container nav {
+overflow: hidden;	
+margin: 0 0 -1px 0;
+}
+.rt_container nav > ul {
+padding: 0 18px 0 0;
+float: right;
+margin: 20px 0 0 0;
+list-style-type: none;
+}
+.rt_container nav > ul li {
+float: left;
+background: none;
+padding: 0;
+margin: 0;
+font-size: 12px;
+}
+.rt_container nav > ul li a {
+display: block;
+padding: 0 12px 4px 12px;
+color: #c4c4c4;
+margin: 0;
+}
+.rt_container nav > ul li a:hover,
+.rt_container nav > ul li a:focus {
+color: #db7f13;	
+}
+
+.rt_comments_groups {
+list-style-type: none;
+padding: 20px 0 0 0;
+margin: 0;
+}
+.rt_comments_groups > li {
+padding: 3px 5px;
+}
+.rt_comments_groups > .rt_all_link {
+font-size: 14px;
+border-bottom: 1px dashed #444;
+padding: 3px 0 8px 5px;
+margin: 0 0 5px 0;
+}
+
+/******************
+ *                *
+ *     TABLES     *
+ *                *
+ ******************/
+ 
+.rt_comments_table {
+overflow: hidden;	
+} 
+.rt_comments_table > table {
+border: 1px solid #555;
+border-collapse: collapse;
+clear: both;
+}
+.rt_comments_table td,
+.rt_comments_table th {
+padding: 10px;
+border: 1px solid #555;
+line-height: 20px;
+}
+.rt_comments_table th {
+background: #191919;
+}
+.rt_comments_table .rt_admin_comment {
+background: #222;
+}
+.rt_comments_table .rt_nick {
+width: 100px;	
+}
+.rt_comments_table .rt_date {
+width: 80px;
+text-align: center;
+}
+.rt_comments_table .rt_content {
+text-align: justify;
+}
+.rt_comments_table button {
+width: 200px;
+clear: none;
+}
+.rt_comments_table #rtEditButton {
+float: left;
+margin: 30px 0 0 150px;
+}
+.rt_comments_table #rtDeleteButton {
+float: right;
+margin: 30px 150px 0 0;
+}
