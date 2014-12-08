@@ -10,7 +10,7 @@
  *
  ********************************************************************/
 
-function __autoload($classname) {
+function __autoload($classname) { // uzyj autoloadera z composera
 	$path = "classes/{$classname}.php";
 	$interface_path = "interfaces/{$classname}.php";
 	
@@ -31,7 +31,7 @@ function __autoload($classname) {
  * Returns true or false.
  *
 **/
-function CheckEmail($email) {
+function CheckEmail($email) { // NIE WOLNO! nazywac metod z duzej litery
 	return (preg_match("/^[a-zA-Z]+[a-zA-Z0-9\._\-]+@[a-zA-Z0-9\-]+\.[a-z]+$/", $email) && strlen($email) <= 255) ? true : false;
 }
 
