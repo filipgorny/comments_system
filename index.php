@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+
+require "vendor/autoload.php"; // ta linia to standard dla projektow z composerem, umozliwia autoloading po psr-0 i 4
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>

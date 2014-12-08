@@ -10,6 +10,10 @@
  *
  ********************************************************************/
 
+// dla tak malego projektu singleton dla bazy jest w miare ok, jednak dla wiekszych rzeczy moze spowodowac
+// konflikty w watkach i bardzo utrudnic testowanie
+
+// singleton to nie jest dobry pattern, poczytaj o dependency injection, sprobuj zainstalowac pimple przez composer i go uzyc
 class DataBase {
 	static private $instance;
 	

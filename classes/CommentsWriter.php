@@ -10,8 +10,8 @@
  *
  ********************************************************************/
  
-class CommentsWriter implements CommentInterface {
-	protected $comments = array();
+class CommentsWriter implements CommentInterface { // prawdopodobnie jest blad w nazwie ze wzgledu na gramatyke angielska, to nie jest klasa zapisujaca komentarze prawda?
+	protected $comments = array(); // czy na pewno musisz uzyc protected? uzywaj minimalnej widocznosci, tutaj zdaje sie wystarczy private
 	
 	public function __construct($comments = array()) {
 		if(!is_array($comments)) throw new CommentException('@param $comments musi być tablicą.');		

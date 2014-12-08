@@ -10,7 +10,7 @@
  *
  ********************************************************************/
 
-class Date {
+class Date { // do czego sluzy ta klasa? czy nie mozemy uzyc DateTime ze standardu PHP? Jesli dodaje cos ponad date (np. tlumaczenie miesiecy, zrobmy adapter na date) - poczytaj o wzorcach adapter i decorator
 	static public $polish_months = array(1 => 'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia');
 	
 	protected $day, $month, $year, $hour, $minute, $second;

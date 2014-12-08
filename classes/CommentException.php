@@ -13,5 +13,5 @@
 class CommentException extends Exception {
 	
 } 
- 
-?>
+
+// nie ma sensu uzywania tagow zamykajych

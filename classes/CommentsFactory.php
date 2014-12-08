@@ -10,6 +10,7 @@
  *
  ********************************************************************/
 
+// pomysl na odseparowanie obiektu tworzacego encje jest dobry, to faktycznie jest rodzaj fabryki a dokladnie repozytorium
 class CommentsFactory {
 	protected $query, $ids, $name, $limit, $order;
 	
@@ -97,7 +98,7 @@ class CommentsFactory {
 	 *
 	**/
 	public function setOrder($order) {
-		if(!is_bool($order)) throw new CommentException('@param $order musi być wartością logiczną.');
+		if(!is_bool($order)) throw new CommentException('@param $order musi być wartością logiczną.'); // uzywaj ladniejszego stylu, rzuc exception w nowej lini po {
 				
 		$this->order = $order;	
 	}
@@ -137,7 +138,7 @@ class CommentsFactory {
 			$this->query .= " LIMIT".$limit[0].", ".$limit[1];	
 		}	
 	
-		$PDO = DataBase::getInstance();
+		$PDO = DataBase::getInstance(); // singletony ucza lenistwa i robia syf
 		
 		$Operation = $PDO->prepare($this->query);
 		if($this->getName()) $Operation->bindValue(':name', $this->getName(), PDO::PARAM_STR);

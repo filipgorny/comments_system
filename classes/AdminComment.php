@@ -1,5 +1,7 @@
 <?php
 
+// kazda klasa musi miec swoj namespace zeby umozliwic jej ladowanie przez standard PSR-4 (ew. mozna nazwac klase Namespace_NazwaKlasy ale ten sposob juz jest przestarzaly)
+
 /********************************************************************
  *
  *  File's name: AdminComment.php
@@ -11,15 +13,31 @@
  ********************************************************************/
 
 class AdminComment extends Comment {
-	protected $User;
+	protected $User; // wlasnosc klasy nie moze nazywac sie z duzej litery
 	
-	public function __construct($id, $name, User $User, $content, Date $Date) {
+	public function __construct($id, $name, User $User, $content, Date $Date) { // poczytaj o PSR-2, w standardzie robimy {} w nowych liniach dla metod i klas
 		parent::__construct($id, $name, $content, $Date);		
 		
 		$this->User = $User;
 	}	
-	
+
 	public function __toString() {
+        // w tym miejscu nie powino byc absolutnie opisu struktury dokumentu html
+        // moze uzyjmy twiga?
+
+        $twig = new Twig_Environment(new Twig_Loader_Filesystem());
+
+        $body = $twig->render(
+            'comment.twig.html',
+            [
+                'editPath' => $this->getEditPath(),
+                '... and so on'
+            ]
+        );
+
+        return $body;
+
+
 		$comment = "\n\t\t<div class=\"rt_comment rt_admin_comment\">";
 		
 		if($this->isAdminLoged()) {
@@ -69,6 +87,7 @@ class AdminComment extends Comment {
 	**/
 	public function add() {
 		$date = date('Y-m-d H:i:s');
+        // w tym miejscu mamy miks php z sql, sprobuj to odseparowac
 		$query = "INSERT INTO ".COMMENTS_TABLE." VALUES(null, :name, null, null, null, :content, :date, :admin_id)";		
 		
 		$PDO = DataBase::getInstance();		

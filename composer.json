@@ -1,0 +1,12 @@
+{
+    "name": "rochmistrz/comments",
+    "authors": [
+        {
+            "name": "Filip Gorny",
+            "email": "filip.gorny@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.0"
+    }
+}

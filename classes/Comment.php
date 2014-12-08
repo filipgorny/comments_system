@@ -70,7 +70,9 @@ abstract class Comment implements CommentInterface {
 	public function getContent() {
 		return $this->content;	
 	}
-	
+
+    // komentarze blokowane moglyby byc w zgodzie z PHPDoc, czyli zawierac deklaracje argumentow i typow zwracanych
+
 	/**
 	 *
 	 * Sets a value of the content.

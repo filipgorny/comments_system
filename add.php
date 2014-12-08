@@ -10,6 +10,9 @@
  *
  ********************************************************************/
 
+// osobny "bottle neck" w tym miejscu nie jest wskazany, uzyj tylko index.php, a nastepnie "routuj" zapytanie
+// do odpowiednich podmodulow
+
 session_start();
  
 include('functions.php');

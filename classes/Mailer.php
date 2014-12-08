@@ -28,7 +28,7 @@ class Mailer {
 	 *
 	**/
 	public function addRecipient($recipient) {
-		$this->recipients[] = $recipient;	
+		$this->recipients[] = $recipient;	// tutaj zmieniasz stan calego mailera, nie lepiej zrobic klase Mail a Mailer wyposazyc w metode $mailer->send(new Mail('...'))?
 	}	
 	
 	/**
